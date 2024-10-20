@@ -1,8 +1,8 @@
 import wx
 
-class ChatApp(wx.Frame):
+class ChazGpt(wx.Frame):
     def __init__(self):
-        super().__init__(None, title='Chat App', size=(400, 300))
+        super().__init__(None, title='Chaz(GPT)', size=(400, 300))
         
         self.panel = wx.Panel(self)
         self.sizer = wx.BoxSizer(wx.VERTICAL)
@@ -27,5 +27,5 @@ class ChatApp(wx.Frame):
 
 if __name__ == '__main__':
     app = wx.App(False)
-    ChatApp()
+    ChazGpt()
     app.MainLoop()
