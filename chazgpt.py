@@ -2,7 +2,7 @@ import wx
 
 class ChazGpt(wx.Frame):
     def __init__(self):
-        super().__init__(None, title='Chaz(GPT)', size=(400, 300))
+        super().__init__(None, title='Chaz(GPT)', size=(720, 900))
         
         self.panel = wx.Panel(self)
         self.sizer = wx.BoxSizer(wx.VERTICAL)
@@ -20,10 +20,11 @@ class ChazGpt(wx.Frame):
 
     def on_send(self, event):
         message = self.message_input.GetValue()
+
         if message:
             self.chat_display.AppendText(f"You: {message}\n")
             self.message_input.Clear()
-            # Here you would typically send the message to a server or other clients
+            # send `message` to server/chatgpt api
 
 if __name__ == '__main__':
     app = wx.App(False)
